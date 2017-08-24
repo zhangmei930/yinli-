@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, img {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+.sale {
+  height: 90px;
+  width: 100%;
+  background: #f6f1e2;
+}
+.sale img {
+  display: block;
+  float: left;
+  margin-left: 107px;
+  margin-right: 41px;
+}
+
+/*# sourceMappingURL=footer.css.map */
