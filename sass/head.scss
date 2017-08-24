@@ -1,0 +1,21 @@
+*{margin: 0;padding: 0;}
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form,img { margin:0; padding:0; }
+ul li{list-style: none;}
+a{text-decoration: none;}
+
+.nav{
+    height: 30px;
+    width: 100%;
+    background: #f1f1f1;  
+    p {
+        line-height: 30px;
+        height: 30px;
+        font-size: 11px;
+        color: #666666;
+        float: left;
+        padding-left: 32px;
+    }
+    ul {
+        float: left;
+    }
+}
