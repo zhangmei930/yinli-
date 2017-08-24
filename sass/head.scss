@@ -1,13 +1,16 @@
 *{margin: 0;padding: 0;}
 html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form,img { margin:0; padding:0; }
-ul li{list-style: none;}
-a{text-decoration: none;}
+ul{
+    li{
+        list-style: none;
+        }
+  }
 
 .nav{
     height: 30px;
     width: 100%;
     background: #f1f1f1;  
-    p {
+    >p {
         line-height: 30px;
         height: 30px;
         font-size: 11px;
@@ -15,7 +18,86 @@ a{text-decoration: none;}
         float: left;
         padding-left: 32px;
     }
-    ul {
+    ul {                          
+        float: right;
+        width: 271px;
+        height: 30px;
+        line-height: 30px;
+        li {
+            float: left;
+            text-align: center; 
+            &:nth-child(3){
+                position: relative;
+                .contact {
+                    position: absolute;
+                    width: 299px;
+                    height: 170px;
+                    right: -30px;
+                    background: #FFFFFF;
+                    display: none;
+                    div {
+                        float: left;
+                        padding: 15px;
+                        img {
+                            display: block;
+                        }
+                    }
+                    }
+                &:hover {
+                    background: #FFFFFF;
+                    .contact {
+                        display: block;  
+                    }
+                }
+            }
+            &:nth-child(4){
+                a{
+                   border: none; 
+                }
+                position: relative;
+                >p{
+                    display: none;
+                    background: #FFFFFF;
+                    font-size: 9px;
+                    padding: 15px 10px;
+                    position: absolute;
+                    left: 0;
+                    width: 90px;
+                }
+                &:hover{
+                    background: #FFFFFF;
+                    >p{
+                        display: block;
+                    }
+                }
+            }
+            a {
+                font-size: 11px;
+                color: #666666;
+                padding: 0 10px;
+                border-right: 1px solid #c0c0c0;
+                &:hover{
+                color: #7dbf2d;
+                }
+            }
+        }
+    }
+}
+.logoList{
+    height: 136px;
+    h1{
+        width: 191px;
+        height: 43px;
+        margin-top: 30px;
+        margin-left: 32px;
+        background: {
+            image: url(../images/PC_LOGO);
+            repeat: no-repeat;
+        }
         float: left;
     }
+    
+//  a {
+//      display: none;
+//  }
 }
