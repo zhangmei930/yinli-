@@ -12,6 +12,10 @@ ul li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .sale {
   height: 90px;
   width: 100%;
@@ -22,6 +26,58 @@ ul li {
   float: left;
   margin-left: 107px;
   margin-right: 41px;
+}
+
+.indr {
+  height: 199px;
+  width: 100%;
+  border-bottom: 1px solid #dddddd;
+}
+.indr ul {
+  width: 217px;
+  height: 198px;
+  float: left;
+}
+.indr ul:nth-child(1) {
+  margin-left: 152px;
+}
+.indr ul h2 {
+  font-weight: normal;
+  font-size: 15px;
+  color: #666666;
+  height: 49px;
+  line-height: 49px;
+  padding-top: 27px;
+}
+.indr ul li {
+  height: 22px;
+  line-height: 10px;
+}
+.indr ul li a {
+  font-size: 11px;
+  color: #666666;
+}
+.indr ul li a:hover {
+  color: #7dbf2d;
+}
+
+.context {
+  height: 97px;
+}
+.context > p {
+  height: 40px;
+  text-align: center;
+  font-size: 11px;
+  color: #666666;
+}
+.context > p:nth-child(1) {
+  margin-top: 17px;
+}
+.context > p a {
+  color: #666666;
+}
+.context > p a:hover {
+  color: #7dbf2d;
 }
 
 /*# sourceMappingURL=footer.css.map */

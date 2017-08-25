@@ -5,6 +5,9 @@ ul{
         list-style: none;
         }
  }  
+ a{
+    text-decoration: none;
+}
 .sale{
     height: 90px;
     width: 100%;
@@ -14,5 +17,55 @@ ul{
         float: left;
         margin-left: 107px;
         margin-right: 41px;
+    }
+}
+.indr{
+    height: 199px;
+    width: 100%;
+    border-bottom: 1px solid #dddddd;
+    ul{
+        width: 217px;
+        height: 198px;
+        float: left; 
+        &:nth-child(1){
+            margin-left: 152px;
+        }
+        h2 {
+            font-weight: normal;
+            font-size: 15px;
+            color: #666666;
+            height: 49px;
+            line-height: 49px;
+            padding-top: 27px;
+        }
+        li{
+            height: 22px;
+            line-height: 10px;
+            a {
+                font-size: 11px;
+                color: #666666;
+                &:hover{
+                color: #7dbf2d;
+                }
+            }
+        }
+    }
+}
+.context {
+    height: 97px;
+    >p{
+        height: 40px;
+        text-align: center;
+        font-size: 11px;
+        color: #666666;
+        &:nth-child(1){
+            margin-top: 17px;
+        }
+        a {
+            color: #666666;
+            &:hover{
+                color: #7dbf2d;
+            }
+        }
     }
 }

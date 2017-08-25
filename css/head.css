@@ -12,6 +12,10 @@ ul li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .nav {
   height: 30px;
   width: 100%;
@@ -91,16 +95,91 @@ ul li {
 }
 
 .logoList {
-  height: 136px;
+  height: 100px;
 }
 .logoList h1 {
-  width: 191px;
+  width: 190px;
   height: 43px;
   margin-top: 30px;
   margin-left: 32px;
-  background-image: url(../images/PC_LOGO);
-  background-repeat: no-repeat;
+  background: url(../images/PC-LOGO.png) no-repeat;
   float: left;
+}
+.logoList h1 > a {
+  display: none;
+}
+.logoList .search {
+  width: 606px;
+  height: 99px;
+  float: left;
+  margin-left: 150px;
+}
+.logoList .search form {
+  width: 604px;
+  height: 36px;
+  border: 1px solid #ffc000;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+.logoList .search form input {
+  border: none;
+  outline: none;
+}
+.logoList .search form .txt {
+  width: 507px;
+  height: 26px;
+  line-height: 26px;
+  font-size: 12px;
+  padding-left: 11px;
+}
+.logoList .search form .sub {
+  width: 81px;
+  height: 36px;
+  background: #ffc000;
+  font-size: 18px;
+  color: white;
+}
+.logoList .search .keyword {
+  height: 31px;
+  width: 330px;
+  margin-left: 10px;
+}
+.logoList .search .keyword a {
+  font-size: 11px;
+  color: #c0caca;
+  padding-right: 12px;
+}
+.logoList .cart {
+  width: 158px;
+  height: 35px;
+  line-height: 35px;
+  border: 1px solid #ffc000;
+  border-radius: 5px;
+  margin-top: 30px;
+  margin-left: 94px;
+  float: left;
+  position: relative;
+}
+.logoList .cart i {
+  position: absolute;
+  left: 120px;
+  top: 3px;
+}
+.logoList .cart i:nth-child(1) {
+  font-size: 34px !important;
+  color: #ffc000;
+  left: 10px;
+}
+.logoList .cart span {
+  position: absolute;
+  left: 50px;
+}
+.logoList .cart span a {
+  font-size: 12px;
+  color: #666666;
+}
+.logoList .cart span a:hover {
+  color: #ffc000;
 }
 
 /*# sourceMappingURL=head.css.map */
