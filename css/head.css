@@ -182,4 +182,113 @@ a {
   color: #ffc000;
 }
 
+.classify {
+  height: 35px;
+  border-bottom: 2px solid #6cac1b;
+}
+.classify .stair {
+  width: 160px;
+  height: 27px;
+  margin-left: 32px;
+  background: #6cac1b;
+  padding-left: 30px;
+  padding-top: 10px;
+}
+.classify .stair span {
+  font-size: 16px;
+  color: #33332b;
+  font-weight: 700;
+}
+.classify .second {
+  width: 190px;
+  height: 360px;
+  background: white;
+  margin-left: 32px;
+}
+.classify .second li {
+  height: 40px;
+  width: 190px;
+  line-height: 40px;
+  position: relative;
+  background: url(../images/5.png) no-repeat right 20px center;
+}
+.classify .second li a {
+  font-size: 12px;
+  color: #333333;
+  padding-left: 20px;
+}
+.classify .second li:hover a {
+  color: #7dbf2d;
+}
+.classify .second li .three {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: -1007px;
+  width: 1007px;
+  border: 1px solid #7dbf2d;
+}
+.classify .second li .three .big {
+  width: 765px;
+}
+.classify .second li .three .big .small {
+  width: 765px;
+}
+.classify .second li .three .big .small .left {
+  width: 96px;
+  float: left;
+}
+.classify .second li .three .big .small .left a {
+  display: block;
+  font-size: 11px;
+  color: #333333;
+  font-weight: 700;
+  text-align: right;
+  width: 80px;
+  padding-right: 5px;
+}
+.classify .second li .three .big .small .left a:hover {
+  color: #7dbf2d;
+}
+.classify .second li .three .big .small .right {
+  float: left;
+  width: 664px;
+  border-bottom: 1px solid #dddddd;
+  margin-left: 5px;
+}
+.classify .second li .three .big .small .right a {
+  font-size: 11px;
+  color: #666666;
+}
+.classify .second li .three .big .small .right a:hover {
+  color: #7dbf2d;
+}
+.classify .second li:hover .three {
+  display: block;
+}
+.classify .second li:nth-child(2) .three {
+  top: -40px;
+}
+.classify .second li:nth-child(3) .three {
+  top: -80px;
+}
+.classify .second li:nth-child(4) .three {
+  top: -120px;
+}
+.classify .second li:nth-child(5) .three {
+  top: -160px;
+}
+.classify .second li:nth-child(6) .three {
+  top: -200px;
+}
+.classify .second li:nth-child(7) .three {
+  top: -240px;
+}
+.classify .second li:nth-child(8) .three {
+  top: -280px;
+}
+.classify .second li:nth-child(9) .three {
+  top: -320px;
+}
+
 /*# sourceMappingURL=head.css.map */
