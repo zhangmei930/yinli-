@@ -238,8 +238,9 @@ a {
   width: 765px;
 }
 .classify .second li .three > div .big .small .left {
-  width: 96px;
+  width: 105px;
   float: left;
+  line-height: 34px;
 }
 .classify .second li .three > div .big .small .left > a {
   display: block;
@@ -247,7 +248,7 @@ a {
   color: #333333;
   font-weight: 700;
   text-align: right;
-  width: 96px;
+  width: 105px;
   padding-right: 5px;
 }
 .classify .second li .three > div .big .small .left > a:hover {
