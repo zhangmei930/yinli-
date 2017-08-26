@@ -115,10 +115,11 @@ a {
   height: 470px;
   margin: 0 auto;
   background: url(../images/login-login.png) no-repeat center left;
+  position: relative;
 }
 .registers .panel .registerer {
   width: 330px;
-  height: 326px;
+  height: 428px;
   background: white;
   margin-top: 30px;
   float: right;
@@ -126,8 +127,81 @@ a {
 }
 .registers .panel .registerer .registerList {
   width: 278px;
-  height: 278px;
+  height: 380px;
   margin: 24px 26px;
+}
+.registers .panel .registerer .registerList h1 {
+  width: 278px;
+  height: 18px;
+  font-size: 18px;
+  color: #666;
+  font-weight: 800;
+  padding-bottom: 26px;
+}
+.registers .panel .registerer .registerList form > input {
+  width: 278px;
+  height: 38px;
+  margin-bottom: 18px;
+  padding: 0 8px;
+}
+.registers .panel .registerer .registerList .test {
+  width: 278px;
+  height: 38px;
+  margin-bottom: 18px;
+}
+.registers .panel .registerer .registerList .test .telTest {
+  width: 156px;
+  height: 38px;
+  padding: 0 8px;
+}
+.registers .panel .registerer .registerList .test .sendTest {
+  width: 100px;
+  height: 38px;
+  background: #7BBE2B;
+  color: white;
+  font-size: 14px;
+  border: none;
+  margin-left: 18px;
+  border-radius: 4px;
+}
+.registers .panel .registerer .registerList label {
+  height: 20px;
+  margin-bottom: 6px;
+  color: #666;
+  font-size: 12px;
+}
+.registers .panel .registerer .registerList label a {
+  color: #7BBE2B;
+}
+.registers .panel .registerer .registerList .regis {
+  width: 276px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #FFC000;
+  font-size: 18px;
+  color: white;
+  border: none;
+  font-weight: 700;
+  margin-top: 15px;
+  border-radius: 2px;
+}
+.registers .panel .registerer .logines {
+  width: 328px;
+  height: 35px;
+  line-height: 35px;
+  background: #F5F5F5;
+  border-radius: 0 0 4px 4px;
+  position: absolute;
+  bottom: 11px;
+  left: 669px;
+}
+.registers .panel .registerer .logines a {
+  font-size: 16px;
+  color: #FFC000;
+}
+.registers .panel .registerer .logines .one {
+  padding-left: 26px;
 }
 
 .context > p {

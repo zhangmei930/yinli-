@@ -123,6 +123,8 @@ a {
   margin-top: 30px;
   float: right;
   border-radius: 4px;
+  position: relative;
+  bottom: -10px;
 }
 .logins .panel .loginer .loginList {
   width: 278px;
@@ -132,6 +134,7 @@ a {
 .logins .panel .loginer .loginList .telLogin {
   width: 278px;
   height: 19px;
+  margin-bottom: 24px;
 }
 .logins .panel .loginer .loginList .telLogin .one {
   color: #FFC000;
@@ -143,6 +146,99 @@ a {
 .logins .panel .loginer .loginList .telLogin a {
   font-size: 18px;
   color: #666666;
+}
+.logins .panel .loginer .loginList .username {
+  width: 278px;
+  height: 38px;
+  margin-bottom: 18px;
+  border: 1px solid #ddd;
+}
+.logins .panel .loginer .loginList .username > div {
+  float: left;
+  width: 38px;
+  height: 36px;
+  line-height: 38px;
+  background: #ddd;
+}
+.logins .panel .loginer .loginList .username > div i {
+  width: 20px;
+  height: 20px;
+  padding-left: 8px;
+  color: white;
+}
+.logins .panel .loginer .loginList .username input {
+  float: left;
+  height: 36px;
+  border: none;
+  outline: none;
+  padding-left: 12px;
+}
+.logins .panel .loginer .loginList .pawd {
+  width: 278px;
+  height: 38px;
+  margin-bottom: 18px;
+  border: 1px solid #ddd;
+}
+.logins .panel .loginer .loginList .pawd > div {
+  float: left;
+  width: 38px;
+  height: 36px;
+  line-height: 38px;
+  background: #ddd;
+}
+.logins .panel .loginer .loginList .pawd > div i {
+  width: 20px;
+  height: 20px;
+  padding-left: 8px;
+  color: white;
+}
+.logins .panel .loginer .loginList .pawd input {
+  float: left;
+  height: 36px;
+  border: none;
+  outline: none;
+  padding-left: 12px;
+}
+.logins .panel .loginer .loginList label {
+  width: 278px;
+  height: 18px;
+  color: #C0C0C0;
+  font-size: 13px;
+  margin-top: -6px;
+}
+.logins .panel .loginer .loginList label input {
+  margin-right: 5px;
+}
+.logins .panel .loginer .loginList button {
+  width: 276px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #FFC000;
+  font-size: 18px;
+  color: white;
+  border: none;
+  font-weight: 700;
+  margin-top: 15px;
+  border-radius: 2px;
+}
+.logins .panel .loginer .register {
+  width: 328px;
+  height: 35px;
+  line-height: 35px;
+  background: #F5F5F5;
+  border-radius: 0 0 4px 4px;
+  position: absolute;
+  bottom: 0;
+  left: 1px;
+}
+.logins .panel .loginer .register a {
+  font-size: 18px;
+  color: #7bbe2b;
+  padding-left: 210px;
+}
+.logins .panel .loginer .register i {
+  color: #7bbe2b;
 }
 
 .context > p {
