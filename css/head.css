@@ -139,6 +139,13 @@ a {
   font-size: 18px;
   color: white;
 }
+.logoList .search form .association_box {
+  background: white;
+  top: 97px;
+  z-index: 1111;
+  border: 1px solid #ccc;
+  display: none;
+}
 .logoList .search .keyword {
   height: 31px;
   width: 330px;
