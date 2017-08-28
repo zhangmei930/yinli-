@@ -217,8 +217,10 @@ a {
                         font-size: 12px;
                         text-align: center;
                         a img{
-                            width: 170px;
-                            height: 170px;
+                            width: 160px;
+                            height: 160px;
+                            transform: translateY(-10px);
+                            transition: transform .25s ease;
                         }
                         dt{
                             color: #666;
@@ -230,7 +232,7 @@ a {
                         }
                     }
                     .joinCar{
-                        display: none;
+//                      display: none;
                         color: #333;
                         position: absolute;
                         width: 200px;
@@ -244,11 +246,23 @@ a {
                         font-weight: bold;
                         transition: top .25s ease;
                     } 
-                    &:hover{
-                       .joinCar{
-                            display: block;
-                        }  
-                    }
+//                  &:hover{
+//                     .joinCar{
+////                          display: block;
+//                          color: #333;
+//                          position: absolute;
+//                          width: 200px;
+//                          height: 50px;
+//                          top: 230px;
+//                          left: 0;
+//                          line-height: 50px;
+//                          background: #FFC000;
+//                          font-size: 16px;
+//                          text-align: center;
+//                          font-weight: bold;
+//                          transition: top .25s ease;
+//                      }  
+//                  }
                 }
                 .none_border{
                     border-right: none;
