@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  overflow: visible;
 }
 
 html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, img {
@@ -190,6 +191,7 @@ a {
 }
 
 .classify {
+  overflow: visible;
   height: 35px;
   border-bottom: 2px solid #6cac1b;
 }
@@ -211,6 +213,10 @@ a {
   height: 360px;
   background: white;
   margin-left: 32px;
+  z-index: 9999999999999999;
+  overflow: visible;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.7);
 }
 .classify .second li {
   height: 40px;
@@ -218,6 +224,9 @@ a {
   line-height: 40px;
   position: relative;
   background: url(../images/5.png) no-repeat right 20px center;
+}
+.classify .second li:hover {
+  background: white;
 }
 .classify .second li > a {
   font-size: 12px;
@@ -234,6 +243,8 @@ a {
   right: -1007px;
   width: 1007px;
   border: 1px solid #7dbf2d;
+  background: white;
+  border-top: none;
 }
 .classify .second li .three > div {
   float: left;

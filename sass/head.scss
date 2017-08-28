@@ -1,4 +1,4 @@
-*{margin: 0;padding: 0;}
+*{margin: 0;padding: 0;overflow: visible;}
 html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form,img { margin:0; padding:0; }
 ul{
     li{
@@ -177,6 +177,7 @@ a {text-decoration: none;}
     
 }
 .classify {
+    overflow: visible;
     height: 35px;
     border-bottom: 2px solid #6cac1b;
     .stair{
@@ -198,12 +199,20 @@ a {text-decoration: none;}
         height: 360px;
         background: white;
         margin-left: 32px;
+        z-index: 9999999999999999;
+        overflow: visible;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.7);
         li{
             height: 40px;
             width: 190px;
             line-height: 40px;
             position: relative;
             background: url(../images/5.png) no-repeat right 20px center;
+            
+            &:hover{
+                background: rgba(255, 255, 255, 1);
+            }
             >a{
                 font-size: 12px;
                 color: #333333;
@@ -221,6 +230,8 @@ a {text-decoration: none;}
                 right: -1007px;
                 width: 1007px;
                 border: 1px solid #7dbf2d;
+                background: rgba(255, 255, 255, 1);
+                border-top: none;
                 >div{
                     float: left;
                     .big{

@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, img {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+dl  dt,dd{
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+//banner
+.banner{
+    height: 360px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1111;
+    ul{
+        height: 360px;
+        position: absolute;
+        overflow: hidden;
+        li{
+            position: relative;
+            height: 360px;
+            width: 100%;
+            float: left;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 360px;
+            }
+        }
+    }
+    #pages {
+        width: 100%;
+        height: 12px;
+        position: absolute;
+        bottom:15px; 
+        left:0; 
+        
+        >div {
+            width: 12px;
+            height: 12px;
+            border-radius: 6px; 
+            background: #fff; 
+            float:left; 
+            margin:5px;
+            cursor: pointer;
+            background: red;
+            &.current {
+               background: yellow;
+          }
+      }
+  }    
+}
+.sift{
+    width: 100%;
+    height: 275px;
+    padding-top: 15px;
+    margin: 0 auto;
+    .photo{
+        width: 1200px;
+        height: 43px;
+        position: relative;
+        text-align: center;
+        margin: 0 auto;
+        img{
+            margin: 0 auto;
+        }
+    }
+    .imgList{
+        width: 1200px;
+        height: 230px;
+        background: #fff;
+        margin:0 auto;
+        .indlist{
+            width: 1150px;
+            height:230px;
+            overflow:hidden;
+            float:left;
+            div{
+                width: 190px;
+                height: 230px;
+                position: relative;
+                float: left;
+                dl{
+                    width: 190px;
+                    height: 230px;
+                    border-right:1px solid #ddd;
+                    float: left;
+                    overflow: hidden;
+                    font-size: 12px;
+                    text-align: center;
+                    a img{
+                        width: 170px;
+                        height: 170px;
+                    }
+                    dt{
+                        color: #666;
+                        margin-top: 5px;
+                    }
+                    dd{
+                        color: red;
+                        margin-top: 5px;
+                    }
+                }
+                .joinCar{
+                    display: none;
+                    color: #333;
+                    position: absolute;
+                    width: 200px;
+                    height: 50px;
+                    top: 230px;
+                    left: 0;
+                    line-height: 50px;
+                    background: #FFC000;
+                    font-size: 16px;
+                    text-align: center;
+                    font-weight: bold;
+                    transition: top .25s ease;
+                } 
+                &:hover{
+                   .joinCar{
+                        display: block;
+                    }  
+                }
+            }
+        } 
+        .next{
+            width: 50px;
+            height: 230px;
+            text-align: center;
+            float: left;
+            position: relative;
+            .nextimg{
+                background: url(../images/slider-arrow.png) no-repeat -60px 0;
+                width: 18px;
+                height: 32px;
+                top: 40%;
+                left: 35%;
+                position: absolute;
+                cursor: pointer;
+            }
+        }
+    }   
+}
+.productList{
+    .big_container{
+        width: 1200px;
+        height: 540px;
+        margin: 0 auto;
+        .state{
+            height: 30px;
+            padding-top: 45px;
+            margin-bottom: 5px;
+            .title{
+                font-size: 24px;
+                color: #666;
+                margin: 0 8px 0 45px;
+            } 
+            .content{
+                font-size: 14px;
+                color: #666;
+            }
+        }
+        .contList{
+            width: 1200px;
+            height: 460px;
+            .listBig{
+                width: 400px;
+                height: 460px;
+                float: left;
+                position: relative;
+                a{
+                    width: 450px;
+                    height: 460px;
+                    position: absolute;
+                    left: -50px;
+                    bottom: 0;
+                    overflow: hidden;
+                    display: block;
+                    text-align: right;
+                    color: #666;
+                    img{
+                        border: none;
+                    }
+                }
+            }
+            .listContent{
+                width: 800px;
+                height: 460px;
+                overflow: hidden;
+                background: #fff;
+                float: left;
+                div{
+                    width: 199px;
+                    height: 230px;
+                    position: relative;
+                    float: left;
+                    overflow: hidden;
+                    border-bottom: 1px solid #ddd;
+                    border-right: 1px solid #ddd;
+                    dl{
+                        width: 199px;
+                        height: 230px;
+                        float: left;
+                        overflow: hidden;
+                        font-size: 12px;
+                        text-align: center;
+                        a img{
+                            width: 170px;
+                            height: 170px;
+                        }
+                        dt{
+                            color: #666;
+                            margin-top: 5px;
+                        }
+                        dd{
+                            color: red;
+                            margin-top: 5px;
+                        }
+                    }
+                    .joinCar{
+                        display: none;
+                        color: #333;
+                        position: absolute;
+                        width: 200px;
+                        height: 50px;
+                        top: 230px;
+                        left: 0;
+                        line-height: 50px;
+                        background: #FFC000;
+                        font-size: 16px;
+                        text-align: center;
+                        font-weight: bold;
+                        transition: top .25s ease;
+                    } 
+                    &:hover{
+                       .joinCar{
+                            display: block;
+                        }  
+                    }
+                }
+                .none_border{
+                    border-right: none;
+                }
+            }
+        }
+    }
+}
+
