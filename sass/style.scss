@@ -21,17 +21,19 @@ a {
 //banner
 .banner{
     height: 360px;
-    width: 100%;
+    width: 1263px;
     overflow: hidden;
     z-index: 1111;
+    position: relative;
     ul{
         height: 360px;
+        width: 1263px;
         position: absolute;
         overflow: hidden;
         li{
             position: relative;
+            width: 1263px;
             height: 360px;
-            width: 100%;
             float: left;
             overflow: hidden;
             img{
@@ -40,22 +42,22 @@ a {
             }
         }
     }
-    #pages {
-        width: 100%;
+    .pages {
+        width: 60%;
         height: 12px;
         position: absolute;
-        bottom:15px; 
-        left:0; 
+        bottom:55px; 
+        left:40%; 
         >div {
             width: 12px;
             height: 12px;
             border-radius: 6px; 
             float:left; 
-            margin:5px;
+            margin-left:25px;
             cursor: pointer;
-            background: red;
+            background: white;
             &.current {
-               background: yellow;
+               background: #FFC000;
           }
       }
   }    
@@ -77,17 +79,17 @@ a {
         }
     }
     .imgList{
-        width: 1200px;
+        width: 1210px;
         height: 230px;
         background: #fff;
         margin:0 auto;
         .indlist{
-            width: 1150px;
+            width: 1140px;
             height:230px;
             overflow:hidden;
             float:left;
             div{
-                width: 190px;
+                width: 189px;
                 height: 230px;
                 position: relative;
                 float: left;
@@ -142,12 +144,15 @@ a {
                 }
             }
         } 
+        .pages{display: none;}
+        .preimg{display: block;}
         .next{
-            width: 50px;
+            width: 44px;
             height: 230px;
             text-align: center;
             float: left;
             position: relative;
+            margin-left: 16px;
             .nextimg{
                 background: url(../images/slider-arrow.png) no-repeat -60px 0;
                 width: 18px;
@@ -273,6 +278,7 @@ a {
         }
     }
 }
+//
 .ladder{
     border: 4px solid #7BBE2B;
     width: 42px;
@@ -294,6 +300,13 @@ a {
                 }
             }
         } 
+        .diffent{
+            &:hover{
+                a{
+                    color: white;
+                }
+            }
+        }
         li {
             width: 42px;
             height: 42px;
@@ -318,7 +331,6 @@ a {
                 height:30px; 
                 line-height: 15px;
                 text-align: center;
-//              display: none;   
             }
             .heart{
                 width: 42px;
@@ -379,4 +391,88 @@ a {
         
     } 
 
+}
+//吸顶
+.ceiling{
+    width: 1200px;
+    margin: 0 auto;
+    h1{
+        width: 190px;
+        height: 43px;
+//      margin-top: 30px;
+        margin-left: 32px;
+        background: url(../images/PC-LOGO.png) no-repeat;
+        float: left;
+        >a {
+          display: none;
+        }
+    }
+     .search {
+         width: 606px;
+         height: 99px;
+         float: left;
+         margin-left: 150px;
+         form {
+             width: 604px;
+             height: 36px;
+             border: 1px solid #ffc000;
+             border-radius: 5px;
+//           margin-top: 30px;
+             input{
+                 border: none;
+                 outline: none;
+             }
+             .txt{
+                 width: 507px;
+                 height: 26px;
+                 line-height: 26px;
+                 font-size: 12px;
+                 padding-left: 11px;
+             }
+             .sub{
+                 width: 81px;
+                 height: 36px;
+                 background: #ffc000;
+                 font-size: 18px;
+                 color: white;
+             }
+             .association_box{
+                 background: white;
+                 top: 97px;
+                 z-index: 1111;
+                 border: 1px solid #ccc;
+                 display: none;
+             }
+         }
+     } 
+    .cart{
+        width: 158px;
+        height: 35px;
+        line-height: 35px;
+        border: 1px solid #ffc000;
+        border-radius: 5px;
+//      margin-top: 30px ;
+        margin-left: 94px;
+        float: left;
+        position: relative;
+        i {
+            position: absolute;
+            left: 120px;
+            top: 3px;
+            &:nth-child(1){ 
+                font-size: 34px!important;
+                color: #ffc000;
+                left:10px;
+            }
+        }
+        span {
+            position: absolute;
+            left:50px;
+            a{
+                font-size: 12px;
+                color: #666666;
+                &:hover{color: #ffc000;}
+            }
+        }
+    }
 }

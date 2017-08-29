@@ -8,8 +8,6 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<link rel="stylesheet" type="text/css" href="css/head.css"/>
 		<link rel="stylesheet" type="text/css" href="css/footer.css"/>
-		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/communal.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<div class="header"></div>
@@ -25,7 +23,7 @@
 				<li><img src="images/rBLsjllMzcKADVV1AAQHnUeZ12o64.jpeg"/></li>
 				<li><img src="images/rBLsjVk4tQyARs67AA_7z8iPWLM53.jpeg"/></li>
 			</ul>
-			<div id="pages"></div>
+			<div class="pages"></div>
 		</div>
 		<!--当季精选-->
 		<div class="sift">
@@ -107,8 +105,12 @@
 						<a href="" class="joinCar">购物车</a>
 					</div>
 				</div>
+				<div class="pages"></div>
 				<div class="next">
 					<div class="nextimg"></div>
+				</div>
+				<div class="pre">
+					<div class="preimg"></div>
 				</div>
 			</div>
 		</div>
@@ -818,6 +820,7 @@
 			</div>	
 		</div>
 		<div class="footer"></div>
+		<!--爬楼梯-->
 		<div class="ladder">
 			<ul class="side_menu">
 				<li><span>蔬菜</span></li>
@@ -842,8 +845,28 @@
 						<img src="images/attention.png"/>
 					</a>
 				</li>
-				<li class="diff"><span><a href="">TOP</a></span></li>
+				<li class="diff diffent"><span><a href="">TOP</a></span></li>
 			</ul>
+		</div>
+		<!--吸顶-->
+		<div class="ceiling">
+			<h1>
+		    	<a href="">银犁食品</a>
+		    </h1>
+		    <div class="search">
+		    	<form class="">
+		    		<input type="text" placeholder="菜" class="txt" />
+		    		<input type="submit" value="搜索" class="sub" />
+		    		<div class="association_box">
+		    			<ul id="get_cookie"></ul>
+		    		</div>
+		    	</form>
+		    </div>
+	        <div class="cart">
+	        	<i class="iconfont icon-gouwuche1"></i>
+				<span><a href="">我的购物车</a></span>
+				<i class="iconfont icon-xiayiye"></i>
+	        </div>
 		</div>
 	</body>
 </html>

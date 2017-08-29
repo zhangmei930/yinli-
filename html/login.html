@@ -6,8 +6,6 @@
 		<link rel="stylesheet" type="text/css" href="../font/iconfont.css"/>
 	    <link rel="stylesheet" type="text/css" href="../css/login.css"/>
 	    <link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.min.css"/>
-	    <script src="../lib/jquery/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
-	    <script src="../lib/jquery_plugins/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
 	    <script src="../js/login.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
@@ -50,19 +48,29 @@
 	    				<div class="telLogin">
 	    					<a href="" class="one active">手机密码登录 </a>
 		    				<span>|</span>
-		    				<a href="">手机验证码登录</a>
-		    				
 	    				</div>
-	    				<div class="username">
-	    					<div><i class="iconfont icon-yonghu"></i></div>
-		    				<input type="text" id="username" placeholder="请输入手机号码">
-		    			</div>
-		    			<div class="pawd">
-		    				<div><i class="iconfont icon-mima"></i></div>
-			    			<input type="password" id="password" placeholder="请输入密码">
-		    			</div>
-						
-						<button id="btnLogin">登录</button>
+	    				<div class="passwodLogin">
+	    					<div class="username">
+		    					<div><i class="iconfont icon-yonghu"></i></div>
+			    				<input type="text" id="username" placeholder="请输入手机号码">
+			    			</div>
+			    			<div class="pawd">
+			    				<div><i class="iconfont icon-mima"></i></div>
+				    			<input type="password" id="password" placeholder="请输入密码">
+			    			</div>
+							<button id="btnLogin">登录</button>
+	    				</div>
+	    				<div class="verifyLogin">
+	    					<div class="username">
+		    					<div><i class="iconfont icon-yonghu"></i></div>
+			    				<input type="text" id="username" placeholder="请输入手机号码">
+			    			</div>
+			    			<div class="test">
+								<input type="text" name="code" id="code" placeholder="请输入手机验证码" class="telTest"><span id="username_info"></span>
+							    <input type="button" value="发送验证码" class="sendTest"><br>
+							</div>
+							<button id="btnLogin">登录</button>
+	    				</div>
 	    			</div>
 	    			<div class="register">
 	    				<a href="register.html">立刻注册</a>

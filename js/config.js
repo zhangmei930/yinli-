@@ -5,6 +5,6 @@ require.config({
 		"jquery" : "lib/jquery/jquery-3.2.1",
 		"load" : "js/load_head_footer",
 		"template" : "lib/arttemplate/",
-//		"load" : "js/load_head_footer",
+		"cookie" : "lib/jquery_plugins/jquery.cookie",
 	}
 });
