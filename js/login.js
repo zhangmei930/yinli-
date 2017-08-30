@@ -1,6 +1,5 @@
 require(["config"], function(){
 	require(["jquery", "load"], function(){
-		
 		$(".btnLogin").click(function(){
 			$.getJSON("/mock/login.json",function(data){
 				if(count){

@@ -1,5 +1,6 @@
 require(["config"], function(){
 	require(["jquery", "template", "load"], function(){
+		cartHandle();
 		function cartHandle (){
 			// 页面打开，则读取 cookie 中已保存的购物车信息，展示到页面中
 			$.cookie.json = true;
@@ -14,14 +15,9 @@ require(["config"], function(){
 			};
 			var html = template("cart_template", data);
 			// 显示
-			// $(".cart_body").append(html);
 			$(html).appendTo(".cart_body");
 
 			// 点击“删除”超级链接，删除所在行信息
-			// $(".cart_body a").click(function(){});
-			// $(".cart_body a").bind("click", function(){});
-			// $(".cart_body a").on("click", function(){})
-			// $(".cart_body").delegate("a", "click", function(){})
 			// 事件委派
 			$(".cart_body").on("click", "a", function(){
 				// 获取当前删除元素的id
@@ -38,13 +34,11 @@ require(["config"], function(){
 				// 判断是否购物车为空
 				if (_products.length === 0) {
 					
-					location = "product.html";
+					location = "list.html";
 				}
-
 				// 更新合计
 				calcTotal();
 			});
-
 			// 数量+/-
 			$(".cart_body").on("click", ".add, .minus", function(){
 				// 获取点击的 + 所在行
@@ -59,8 +53,7 @@ require(["config"], function(){
 					if (_amount <= 1)
 						return;
 					_amount--;
-				}
-				
+				}			
 				// 获取+所在行商品编号
 				var id = _row.children(".id").text();
 				// 获取商品在数组中索引
@@ -75,7 +68,6 @@ require(["config"], function(){
 				var _price = _row.children(".price").text();
 				// 显示修改数量后的小计
 				_row.children(".sub").text(_price * _amount);
-
 				// 更新合计
 				calcTotal();
 			});

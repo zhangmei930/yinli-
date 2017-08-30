@@ -21,12 +21,14 @@
 				<span>小计</span>
 				<span>操作</span>
 			</div>
-			<div class="cart_body"></div>
+			<div class="cart_body">
+				
+			</div>
 			<div class="footer">
 				合计金额：<span class="total">0</span>
 			</div>
 		</div>
-		<script type="text/javascript">
+		<script type="text/html">
 			<% 
 				for (var i = 0, len = products.length; i < len; i++) {
 					var prod = products[i];
@@ -48,7 +50,7 @@
 	<script src="lib/jquery/jquery-1.12.4.min.js"></script>
 	<script src="lib/jquery_plugins/jquery.cookie.js"></script>
 	<script>
-		$(function(){
+		function sss(){
 			// 页面打开，则读取 cookie 中已保存的购物车信息，展示到页面中
 			$.cookie.json = true;
 			var _products = $.cookie("products") || [];
@@ -69,11 +71,7 @@
 							  .parent()
 							  .appendTo(".cart_body");
 			});
-		});
-
-		
-		
-
+		};
 		// 查找指定id商品在 products 数组中是否已存在
 		// 存在则返回在数组中的下标，否则返回-1
 		function isExist(id, products) {

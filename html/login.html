@@ -73,37 +73,5 @@
 	    	<p><a href="">关于我们</a> | <a href="">联系我们</a></p>
 	    	<p>Copyright &copy; 2017-2030银犁食品&nbsp;(ylfood.com) All rights reserved.&nbsp;&nbsp;蜀ICP备：11006129号-3 网站统计 站长统计</p>
 	    </div>
-	    <script src="../js/tools.js" type="text/javascript" charset="utf-8"></script>
-	    <script type="text/javascript">
-			function ckUsername() {
-				var result = /^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\\d{8}$$/.test($("#username").value);
-				$("#username_info").innerHTML = "";
-				if (!result)
-					$("#username_info").innerHTML = "用户名格式有误";
-				return result;
-			}
-			// 密码可以是任意字符，长度在6-20位之间
-			function ckPassword() {
-				var result = /^.{6,20}$/.test($("#password").value);
-				$("#password_info").innerHTML = "";
-				if (!result)
-					$("#password_info").innerHTML = "密码格式有误";
-				return result;
-			}
-			$("#password").onblur = ckPassword;
-			$("#btnLogin").onclick=function(e){
-				console.log("333");
-			    e = e || event;
-				if(!(ckUsername() && ckPassword())){
-					e.preventDefault();
-					alert("用户名或密码错误，请重新输入");
-				} else {
-					alert("成功");
-//					var  _username= $("#username").value;
-//					setCookie("loginUser", _username, {expires:1;path:/});
-//					location="http://127.0.0.1:8080/index.html";
-				}
-			};
-		</script>
 	</body>
 </html>
