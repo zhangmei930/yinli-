@@ -2,15 +2,81 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
-		<script src="../lib/requirejs/require.js" type="text/javascript" data-main="js/index" charset="utf-8"></script>
-		<!--<link rel="stylesheet" type="text/css" href="css/style.css"/>-->
+		<title>商品列表</title>
+		<script src="../lib/requirejs/require.js" type="text/javascript" data-main="../js/list" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../css/list.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/footer.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/head.css"/>
 	</head>
 	<body>
 		<div class="header"></div>
-		
-		<div class="footer"></div>
+		<div class="main">
+			
+			<div class="clazz">
+				<span>全部商品</span>><span>蔬菜</span>><span>"叶菜类"</span>
+			</div>
+			<div class="group">
+	      		<div class="groupleft">
+	      			<a href="">品类  |</a>
+	      		</div>
+	      		<div class="groupright">
+	      			<a href="">上海青（飘儿白）</a>
+				    <a href="">叶用芥菜</a>
+				    <a href="">娃娃菜</a>
+				    <a href="">油麦菜</a>
+				    <a href="">甘蓝（卷心菜）</a>
+				    <a href="">生菜</a>
+				    <a href="">白菜</a>
+				    <a href="">空心菜</a>
+				    <a href="">红苕尖</a>
+				    <a href="">芹菜</a>
+				    <a href="">莴笋尖（凤尾）</a>
+				    <a href="">菜心</a>
+				    <a href="">血皮菜</a>
+				    <a href="">韭菜</a>
+				    <a href="">香菜</a>
+				    <a href="">鱼腥草</a>
+				    <a href="">软浆叶</a>
+	      		</div>
+			</div>
+			<div class="condition">
+				条件 ：暂时没有过滤条件
+			</div>
+			<div class="option">
+				<div class="composite">
+					<span><a href="">综合</a></span>
+					<span><a href="">销量</a></span>
+					<span><a href="">价格</a></span>
+				</div>
+				<div class="optionRight">
+					<div>
+						共有<span>19</span>件商品
+					</div>
+					<div>
+						<span>1</span>/1
+					</div>
+					<div class="up"><</div>
+					<div class="down">></div>
+				</div>
+			</div>
+			<div class="mainlist">
+			</div>
+		</div>
+		<div class="footer"></div>	
+		<script type="text/html" id="lists">
+			<!--模板-->
+			<% 
+				for (var i = 0, len = list.length; i < len; i++) {
+					var prod = list[i];
+			%>
+			<div class="product">
+				<span class="id"><%= prod.id %></span>
+				<span class="fromImg"><img src="<%= prod.imgSrc %>"></span><br />
+				<span class="prod_price"><%= prod.price %></span><br />
+				<span class="prod_title"><%= prod.title %></span><br />
+				<a href="">加入购物车</a>
+			</div>
+			<% } %>
+		</script>
 	</body>
 </html>

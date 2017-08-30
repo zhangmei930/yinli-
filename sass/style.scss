@@ -396,11 +396,15 @@ a {
 .ceiling{
     width: 1200px;
     margin: 0 auto;
+    position: fixed;
+    top:10px;
+    background: white;
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: 2px solid #7BBE2B;
+    padding-left: 31px;
     h1{
         width: 190px;
         height: 43px;
-//      margin-top: 30px;
-        margin-left: 32px;
         background: url(../images/PC-LOGO.png) no-repeat;
         float: left;
         >a {
@@ -412,53 +416,50 @@ a {
          height: 99px;
          float: left;
          margin-left: 150px;
+         display: none;
          form {
-             width: 604px;
-             height: 36px;
              border: 1px solid #ffc000;
-             border-radius: 5px;
-//           margin-top: 30px;
+             border-radius: 4px;
              input{
                  border: none;
                  outline: none;
              }
              .txt{
-                 width: 507px;
-                 height: 26px;
-                 line-height: 26px;
+                 width: 517px;
+                 height: 32px;
+                 line-height: 32px;
                  font-size: 12px;
-                 padding-left: 11px;
              }
              .sub{
-                 width: 81px;
-                 height: 36px;
+                 width: 82px;
+                 height: 38px;
                  background: #ffc000;
                  font-size: 18px;
                  color: white;
              }
-             .association_box{
-                 background: white;
-                 top: 97px;
-                 z-index: 1111;
-                 border: 1px solid #ccc;
-                 display: none;
-             }
+//           .association_box{
+//               background: white;
+//               top: 97px;
+//               z-index: 1111;
+//               border: 1px solid #ccc;
+//               display: none;
+//           }
          }
      } 
     .cart{
-        width: 158px;
-        height: 35px;
-        line-height: 35px;
+        width: 108px;
+        height: 36px;
+        line-height: 34px;
         border: 1px solid #ffc000;
         border-radius: 5px;
-//      margin-top: 30px ;
-        margin-left: 94px;
-        float: left;
+        padding-left: 50px;
+        float: right;
+        right: 0;
         position: relative;
         i {
             position: absolute;
             left: 120px;
-            top: 3px;
+            top: 2px;
             &:nth-child(1){ 
                 font-size: 34px!important;
                 color: #ffc000;
@@ -467,7 +468,7 @@ a {
         }
         span {
             position: absolute;
-            left:50px;
+            left:55px;
             a{
                 font-size: 12px;
                 color: #666666;

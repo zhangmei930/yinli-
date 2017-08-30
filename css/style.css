@@ -378,11 +378,17 @@ a {
 .ceiling {
   width: 1200px;
   margin: 0 auto;
+  position: fixed;
+  z-index: 99999999999999999999;
+  top: 10px;
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 2px solid #7BBE2B;
+  padding-left: 31px;
 }
 .ceiling h1 {
   width: 190px;
   height: 43px;
-  margin-left: 32px;
   background: url(../images/PC-LOGO.png) no-repeat;
   float: left;
 }
@@ -394,52 +400,44 @@ a {
   height: 99px;
   float: left;
   margin-left: 150px;
+  display: none;
 }
 .ceiling .search form {
-  width: 604px;
-  height: 36px;
   border: 1px solid #ffc000;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 .ceiling .search form input {
   border: none;
   outline: none;
 }
 .ceiling .search form .txt {
-  width: 507px;
-  height: 26px;
-  line-height: 26px;
+  width: 517px;
+  height: 32px;
+  line-height: 32px;
   font-size: 12px;
-  padding-left: 11px;
 }
 .ceiling .search form .sub {
-  width: 81px;
-  height: 36px;
+  width: 82px;
+  height: 38px;
   background: #ffc000;
   font-size: 18px;
   color: white;
 }
-.ceiling .search form .association_box {
-  background: white;
-  top: 97px;
-  z-index: 1111;
-  border: 1px solid #ccc;
-  display: none;
-}
 .ceiling .cart {
-  width: 158px;
-  height: 35px;
-  line-height: 35px;
+  width: 108px;
+  height: 36px;
+  line-height: 34px;
   border: 1px solid #ffc000;
   border-radius: 5px;
-  margin-left: 94px;
-  float: left;
+  padding-left: 50px;
+  float: right;
+  right: 0;
   position: relative;
 }
 .ceiling .cart i {
   position: absolute;
   left: 120px;
-  top: 3px;
+  top: 2px;
 }
 .ceiling .cart i:nth-child(1) {
   font-size: 34px !important;
@@ -448,7 +446,7 @@ a {
 }
 .ceiling .cart span {
   position: absolute;
-  left: 50px;
+  left: 55px;
 }
 .ceiling .cart span a {
   font-size: 12px;

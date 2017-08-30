@@ -209,6 +209,7 @@ a {
   font-weight: 700;
 }
 .classify .second {
+  display: none;
   width: 190px;
   height: 360px;
   background: white;
@@ -332,6 +333,9 @@ a {
 }
 .classify .second li:nth-child(9) .three {
   top: -320px;
+}
+.classify:hover .second {
+  display: block;
 }
 
 /*# sourceMappingURL=head.css.map */

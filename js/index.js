@@ -112,21 +112,17 @@ require(["config"], function(){
 		    });
 		});
 		
-		
-		
-		
-		
-		
-		
-		$(function(){
-			$("#container a").click(function(){
+		//joincart
+		function joinCart(){
+			$(".sift a").click(function(){
+				alert("in");
 				// 找出超级链接所在行
-				var _row = $(this).parent(".product")
+				var _row = $(this).parent(".join");
 				// 将所在行商品信息保存到对象中
 				var product = {
 					id : _row.children().first().val(),
-					name : _row.children().eq(2).text(),
-					price : _row.children(".prod_price").text(),
+					name : _row.children().eq(1).children().eq(2).text(),
+					price : _row.children().eq(1).children().eq(3).text(),
 					imgSrc : _row.children(".prod_img").attr("src"),
 					amount : 1
 				};
@@ -157,27 +153,32 @@ require(["config"], function(){
 
 				return -1;
 			}
-		});
-	});
-})
+		}
+		
 
-//吸顶
-//爬楼梯
-$(function(){
-	var winHeight = $(window).height();
-	var layoutHeight = $(".banner").offset().top;
-	var autoScroll = true;
-	$(window).scroll(function(){
-		if (autoScroll) {
-			var _scrollTop = $(window).scrollTop();
-			if (_scrollTop > layoutHeight) {
-				$(".ceiling").stop().fadeIn();
-			} else {
-				$(".ceiling").stop().fadeOut();
-			}	
+		//吸顶
+		$(document).ready(function(){
+			ceil();
+		})
+		function ceil(){
+			var winHeight = $(window).height();
+			var layoutHeight = $(".banner").offset().top;
+			var autoScroll = true;
+			$(window).scroll(function(){
+				console.log(layoutHeight)
+				if (autoScroll) {
+					var _scrollTop = $(window).scrollTop();
+					if (_scrollTop > layoutHeight) {
+						$(".ceiling").show();
+					} else {
+						$(".ceiling").hide();
+					}	
+				}
+			});
+			
 		}
 	});
-});
+})
 
 
 			

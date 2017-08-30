@@ -195,6 +195,7 @@ a {text-decoration: none;}
         
     }
     .second{
+        display: none;
         width: 190px;
         height: 360px;
         background: white;
@@ -325,5 +326,10 @@ a {text-decoration: none;}
             }
             
         } 
-    }     
+    }  
+    &:hover{
+        .second{
+            display: block;
+        }
+    }   
 }

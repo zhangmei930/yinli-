@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>查看购物车</h1>
+	<div>
+		<span>商品编号</span>
+		<span>图片</span>
+		<span>描述</span>
+		<span>单价</span>
+		<span>数量</span>
+		<span>小计</span>
+		<span>操作</span>
+	</div>
+	<div class="cart_body">
+		
+	</div>
+
+	<!-- 模板 -->
+	<script type="text/html" id="cart_template">
+		<% 
+			for (var i = 0, len = products.length; i < len; i++) {
+				var prod = products[i];
+		%>
+		<div>
+			<span><%= prod.id %></span>
+			<span><img src="<%= prod.imgSrc %>"></span>
+			<span><%= prod.name %></span>
+			<span><%= prod.price %></span>
+			<span><span>-</span><input type="text" size="1" value="<%= prod.amount %>"><span>+</span></span>
+			<span><%= prod.price * prod.amount %></span>
+			<span><a href="javascript:void(0)">删除</a></span>
+		</div>
+		<% } %>
+	</script>
+
+	<script src="lib/arttemplate/template-native.js"></script>
+	<script src="lib/jquery/jquery-1.12.4.min.js"></script>
+	<script src="lib/jquery_plugins/jquery.cookie.js"></script>
+	<script>
+		$(function(){
+			// 页面打开，则读取 cookie 中已保存的购物车信息，展示到页面中
+			$.cookie.json = true;
+			var _products = $.cookie("products") || [];
+			if (_products.length === 0) {
+				alert("购物车为空，请选购商品....");
+				location = "product.html";
+			}
+			// 准备模板数据，渲染
+			var data = {
+				products : _products
+			};
+			var html = template("cart_template", data);
+			// 显示
+			// $(".cart_body").append(html);
+			$(html).appendTo(".cart_body");
+		});
+		// 查找指定id商品在 products 数组中是否已存在
+		// 存在则返回在数组中的下标，否则返回-1
+		function isExist(id, products) {
+			for (var i = 0, len = products.length; i < len; i++) {
+				if (products[i].id == id)
+					return i;
+			}
+			return -1;
+		}
+	</body>
+</html>

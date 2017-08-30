@@ -130,6 +130,7 @@ a {
   width: 278px;
   height: 278px;
   margin: 24px 26px;
+  text-align: center;
 }
 .logins .panel .loginer .loginList .telLogin {
   width: 278px;
@@ -140,12 +141,11 @@ a {
   color: #FFC000;
   width: 108px;
   height: 29px;
-  border-bottom: 2px solid #FFC000;
-  padding-bottom: 3px;
 }
 .logins .panel .loginer .loginList .telLogin a {
-  font-size: 18px;
+  font-size: 24px;
   color: #666666;
+  font-weight: bold;
 }
 .logins .panel .loginer .loginList .username {
   width: 278px;
