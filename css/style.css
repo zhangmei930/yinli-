@@ -379,12 +379,12 @@ a {
   width: 1200px;
   margin: 0 auto;
   position: fixed;
-  z-index: 99999999999999999999;
   top: 10px;
   background: white;
   background: rgba(255, 255, 255, 0.8);
   border-bottom: 2px solid #7BBE2B;
   padding-left: 31px;
+  display: none;
 }
 .ceiling h1 {
   width: 190px;

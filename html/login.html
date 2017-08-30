@@ -5,15 +5,14 @@
 		<title>登录</title>
 		<link rel="stylesheet" type="text/css" href="../font/iconfont.css"/>
 	    <link rel="stylesheet" type="text/css" href="../css/login.css"/>
-	    <link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.min.css"/>
-	    <script src="../js/login.js" type="text/javascript" charset="utf-8"></script>
+	    <script src="../lib/requirejs/require.js" type="text/javascript" data-main="../js/login" charset="utf-8"></script>
 	</head>
 	<body>
 		<!--导航-->
 	    <div class="nav">
 		    <p>送至：<span>四川成都市</span></p>
 		    <ul>
-		  	    <li><a href="#">登录</a></li>
+		  	    <li class="login_reg"><a href="#">登录</a></li>
 		        <li><a href="#">我的订单</a></li>
 		  	    <li>
 		  		    <a href="#">银犁APP</a>
@@ -52,10 +51,12 @@
 	    					<div class="username">
 		    					<div><i class="iconfont icon-yonghu"></i></div>
 			    				<input type="text" id="username" placeholder="请输入手机号码">
+			    				<span id="username_info"></span>
 			    			</div>
 			    			<div class="pawd">
 			    				<div><i class="iconfont icon-mima"></i></div>
 				    			<input type="password" id="password" placeholder="请输入密码">
+				    			<span id="password_info"></span>
 			    			</div>
 							<button id="btnLogin">登录</button>
 	    				</div>
@@ -72,106 +73,35 @@
 	    	<p><a href="">关于我们</a> | <a href="">联系我们</a></p>
 	    	<p>Copyright &copy; 2017-2030银犁食品&nbsp;(ylfood.com) All rights reserved.&nbsp;&nbsp;蜀ICP备：11006129号-3 网站统计 站长统计</p>
 	    </div>
-	    
+	    <script src="../js/tools.js" type="text/javascript" charset="utf-8"></script>
 	    <script type="text/javascript">
-			function on(element, type, callback) {
-				if (element.addEventListener) { 
-					if (type.indexOf("on") === 0) 
-						type = type.slice(2);
-					element.addEventListener(type, callback);
-				} else {
-					if (type.indexOf("on") !== 0)
-						type = "on" + type;
-					element.attachEvent(type, callback);
-				}
-			}
-			function $(selector, context) {
-				context = context || document;
-				if (selector.indexOf("#") === 0) 
-					return document.getElementById(selector.slice(1));
-				if (selector.indexOf(".") === 0)
-					return getByClassName(selector.slice(1), context);
-				return context.getElementsByTagName(selector);
-			}
-			function getByClassName(className, context) {
-				context = context || document;
-				if (context.getElementsByClassName)
-					return context.getElementsByClassName(className);
-				var result = [];
-				var elements = $("*", context);
-				for (var i = 0, len = elements.length; i < len; i++) {
-					var classNames = elements[i].className.split(" ");
-					if (inArray(className, classNames) !== -1)
-						result.push(elements[i]);
-				}
+			function ckUsername() {
+				var result = /^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\\d{8}$$/.test($("#username").value);
+				$("#username_info").innerHTML = "";
+				if (!result)
+					$("#username_info").innerHTML = "用户名格式有误";
 				return result;
 			}
-			function inArray(value, array) {
-				if (Array.prototype.indexOf)
-					return array.indexOf(value);
-				for (var i = 0, len = array.length; i < len; i++) {
-					if (array[i] === value)
-						return i;
-				}
-				return -1;
-			}
-			function setCookie(key, value, options) {
-				var cookie = encodeURIComponent(key) + "=" + encodeURIComponent(value); // "key=value"
-			
-				options = options || {};
-				if (options.expires) { 
-					var date = new Date();
-					date.setDate(date.getDate() + options.expires);
-					cookie += ";expires=" + date.toUTCString();
-				}
-				if (options.path) { 
-					cookie += ";path=" + options.path;
-				}
-				if (options.domain) {
-					cookie += ";domain=" + options.domain;
-				}
-				if (options.secure) {
-					cookie += ";secure";
-				}
-				document.cookie = cookie;
-			}
-			function ckTel() {
-				var reg = new RegExp("^\\w{6,14}$");
-				return reg.test($("#tel").value);
-			}
+			// 密码可以是任意字符，长度在6-20位之间
 			function ckPassword() {
-				var reg = /^.{6,}/;
-				return reg.test($("#password").value);
+				var result = /^.{6,20}$/.test($("#password").value);
+				$("#password_info").innerHTML = "";
+				if (!result)
+					$("#password_info").innerHTML = "密码格式有误";
+				return result;
 			}
-			window.onload=function(){
-				var count = 0,
-					str = "";
-				while (count < 4){
-					var rand = Math.floor(Math.random() * 75) + 48;
-					if (rand >= 48 && rand <= 57
-						|| rand >= 65 && rand <= 90
-						|| rand >= 97 && rand <= 122) {
-						count++;
-						str += String.fromCharCode(rand);
-					}
-				}
-				$("#ucap").innerHTML=str;
-			}
-			$("#btn").onclick=function(e){
-				console.log("aaaa");
-				if($("#cap").value !== $("#ucap").innerHTML){
+			$("#password").onblur = ckPassword;
+			$("#btnLogin").onclick=function(e){
+				console.log("333");
+			    e = e || event;
+				if(!(ckUsername() && ckPassword())){
 					e.preventDefault();
-					$("#yanzheng-info").style.display="block";
-					$("#yanzheng-info-choose").innerHTML="验证码错误";
-				}
-				else if(!ckPassword() || !ckTel()){
-					e.preventDefault();
-					$("#yanzheng-info").style.display="block";
-					$("#yanzheng-info-choose").innerHTML="用户名或密码错误";
-				}else{
-					var  _tel= $("#tel").value;
-					setCookie("loginUser", _tel, {expires:1});
-					location="http://127.0.0.1:8080/index.html";
+					alert("用户名或密码错误，请重新输入");
+				} else {
+					alert("成功");
+//					var  _username= $("#username").value;
+//					setCookie("loginUser", _username, {expires:1;path:/});
+//					location="http://127.0.0.1:8080/index.html";
 				}
 			};
 		</script>

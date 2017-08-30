@@ -1,6 +1,7 @@
 require(["config"], function(){
 	require(["jquery", "load"], function(){
-		$(".row2_login input").click(function(){
+		
+		$(".btnLogin").click(function(){
 			$.getJSON("/mock/login.json",function(data){
 				if(count){
 					var uname = $(".row2_row1_user_2").val();
@@ -28,7 +29,6 @@ require(["config"], function(){
 						}	
 					}
 					$(".zhuangtailan").text("您输入的账号或者密码有误，请从新输入!")
-					$(".zhuangtailan").append("<i class='iconfont icon-gaojing'></i>")
 					$(".row3_row1_user_2").val("")
 					$(".row3_row2_user_2").val("")
 				}

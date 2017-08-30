@@ -22,7 +22,7 @@ require(["config"], function(){
 				// 判断在 cookie 中是否有已存在的购物车数组结构
 				// 使用 jquery 的 cookie 插件操作 cookie
 				$.cookie.json = true; // 自动转换
-				var _products = $.cookie("list") || [];
+				var _products = $.cookie("products") || [];
 				// 查找当前选购商品的ID在数组中已选购商品元素中是否存在
 				var index = isExist(product.id, _products);
 				if (index === -1) { // 不存在

@@ -1,5 +1,5 @@
 require(["config"], function(){
-	require(["jquery", "load"], function(){
+	require(["jquery", "template", "load"], function(){
 		function cartHandle (){
 			// 页面打开，则读取 cookie 中已保存的购物车信息，展示到页面中
 			$.cookie.json = true;
