@@ -19,25 +19,29 @@
   line-height: 40px;
   font-size: 14px;
 }
-.mains .carts .carts_one label {
-  width: 114px;
+.mains .carts .carts_one span {
+  display: block;
+  float: left;
+  width: 104px;
   height: 38px;
+  color: #666;
   padding-left: 10px;
 }
-.mains .carts .carts_one span {
-  width: 114px;
-  height: 38px;
+.mains .carts .carts_one span:nth-child(2), .mains .carts .carts_one span:nth-child(3) {
+  display: none;
+  width: 0;
 }
-.mains .carts .cart_body {
-  width: 1000px;
-  height: 612px;
-  margin: auto;
-  border: 1px solid #ccc;
+.mains .carts .carts_one span:nth-child(4) {
+  width: 362px;
 }
-.mains .carts .cart_body .row {
-  width: 1000px;
-  height: 102px;
-  border-bottom: 1px solid #ccc;
+.mains .carts .carts_one span:nth-child(6) {
+  width: 130px;
+}
+.mains .carts .carts_one span:nth-child(7) {
+  width: 132px;
+}
+.mains .carts .carts_one span:nth-child(8) {
+  width: 86px;
 }
 
 /*# sourceMappingURL=cart.css.map */

@@ -77,7 +77,7 @@ require(["config"], function(){
 					var _row = $(this).parents(".row");
 					sum += Number(_row.children(".sub").text());
 				});
-				$(".footer .total").text(sum);
+				$(".foot .total").text(sum);
 			}
 			function isExist(id, products) {
 				for (var i = 0, len = products.length; i < len; i++) {

@@ -19,27 +19,30 @@
            height: 40px;
            line-height: 40px;
            font-size: 14px;
-           label{
-               width: 114px;
-               height: 38px;
-               padding-left: 10px;
-           }
            span{
-               width: 114px;
+               display: block;
+               float: left;
+               width: 104px;
                height: 38px;
-               
+               color: #666;
+               padding-left: 10px;
+               &:nth-child(2), &:nth-child(3){
+                   display: none;
+                   width: 0;
+               }
+               &:nth-child(4){
+                   width: 362px;
+               }
+               &:nth-child(6){
+                   width: 130px;
+               }
+               &:nth-child(7){
+                   width: 132px;
+               }
+               &:nth-child(8){
+                   width: 86px;
+               }
            }
-       }
-       .cart_body{
-           width: 1000px;
-           height: 612px;
-           margin: auto;
-           border: 1px solid #ccc;
-           .row{
-               width: 1000px;
-               height: 102px;
-               border-bottom: 1px solid #ccc;
-           }
-       }
+        }
    }
 }
