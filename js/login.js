@@ -50,7 +50,7 @@ require(["config"],function(){
 						}	
 					}
 					
-					$(".zhuangtailan").text("您输入的账号或者密码有误，请从新输入!")
+					$(".zhuangtailan").text("您输入的账号或者密码有误，请重新输入!")
 					$(".zhuangtailan").append("<i class='iconfont icon-gaojing'></i>")
 					$(".row2_row1_user_2").val("")
 					$(".row2_row2_user_2").val("")
@@ -66,7 +66,7 @@ require(["config"],function(){
 //							break;
 						}	
 					}
-					$(".zhuangtailan").text("您输入的账号或者密码有误，请从新输入!")
+					$(".zhuangtailan").text("您输入的账号或者密码有误，请重新输入!")
 					$(".zhuangtailan").append("<i class='iconfont icon-gaojing'></i>")
 					$(".row3_row1_user_2").val("")
 					$(".row3_row2_user_2").val("")

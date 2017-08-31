@@ -43,5 +43,59 @@
 .mains .carts .carts_one span:nth-child(8) {
   width: 86px;
 }
+.mains .carts .cart_body {
+  width: 1000px;
+  height: 306px;
+  margin: auto;
+}
+.mains .carts .cart_body .row {
+  width: 978px;
+  height: 80px;
+  margin: auto;
+  padding: 10px;
+  border: 1px soli #ddd;
+}
+.mains .carts .cart_body .row span {
+  display: block;
+  float: left;
+}
+.mains .carts .cart_body .row span:nth-child(1) {
+  width: 30px;
+  height: 18px;
+}
+.mains .carts .cart_body .row span:nth-child(2) {
+  width: 0;
+  display: none;
+}
+.mains .carts .cart_body .row span:nth-child(3) {
+  width: 80px;
+  height: 80px;
+  background: white;
+  cursor: pointer;
+  border: 1px solid #f2f2f2;
+}
+.mains .carts .cart_body .row span:nth-child(3) img {
+  width: 80px;
+  height: 80px;
+}
+.mains .carts .cart_body .row span:nth-child(4) {
+  width: 376px;
+  height: 38px;
+  display: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+  margin-left: 10px;
+}
+.mains .carts .cart_body .row span:nth-child(5) {
+  width: 118px;
+  height: 18px;
+  font-size: 14px;
+}
+.mains .carts .cart_body .row span:nth-child(6) {
+  width: 90px;
+  height: 22px;
+  font-size: 14px;
+}
 
 /*# sourceMappingURL=cart.css.map */
