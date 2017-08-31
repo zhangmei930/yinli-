@@ -15,7 +15,7 @@ ul li {
 a {
   text-decoration: none;
 }
-
+/*头部*/
 .nav {
   height: 30px;
   width: 100%;
@@ -94,7 +94,7 @@ a {
 .nav ul li a:hover {
   color: #7dbf2d;
 }
-
+/*logo*/
 .logoList {
   height: 100px;
 }
@@ -104,7 +104,7 @@ a {
   margin-top: 30px;
   margin-left: 140px;
 }
-
+/*登录*/
 .logins {
   width: 100%;
   height: 470px;
@@ -116,131 +116,159 @@ a {
   margin: 0 auto;
   background: url(../images/login-login.png) no-repeat center left;
 }
-.logins .panel .loginer {
-  width: 330px;
-  height: 326px;
-  background: white;
-  margin-top: 30px;
-  float: right;
-  border-radius: 4px;
-  position: relative;
-  bottom: -10px;
+.logins .panel .form_div{
+    background-color: rgba(0,0,0,0.5);
+    overflow: hidden;
+    position: relative;
+    width: 350px;
+    height: 405px;
+    top: 30px;
+    left: 67%;
 }
-.logins .panel .loginer .loginList {
-  width: 278px;
-  height: 278px;
-  margin: 24px 26px;
-  text-align: center;
+.youshang{
+	display: block;
+	width: 65px;
+	height: 65px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 9999;
+	cursor: pointer;
 }
-.logins .panel .loginer .loginList .telLogin {
-  width: 278px;
-  height: 19px;
-  margin-bottom: 24px;
+.youshang i{
+	background-position: 0 -230px;
+	width: 65px;
+	height: 65px;
+	display: block;
 }
-.logins .panel .loginer .loginList .telLogin .one {
-  color: #FFC000;
-  width: 108px;
-  height: 29px;
+.zhuti{
+	width: 270px;
+	margin-left: 40px;
 }
-.logins .panel .loginer .loginList .telLogin a {
-  font-size: 24px;
-  color: #666666;
-  font-weight: bold;
+.row1{
+	margin: 14px 0 19px;
+	height: 40px;
+	overflow: hidden;
+	line-height: 40px;
+	border-bottom: 1px solid #e9e9e9;
 }
-.logins .panel .loginer .loginList .username {
-  width: 278px;
-  height: 38px;
-  margin-bottom: 18px;
-  border: 1px solid #ddd;
+.row1 span{
+	float: left;
+	display: inline-block;
+	font-size: 12px;
+	color: #999;
+	padding: 0 18px;
 }
-.logins .panel .loginer .loginList .username > div {
-  float: left;
-  width: 38px;
-  height: 36px;
-  line-height: 38px;
-  background: #ddd;
+.row1 a{
+	float: left;
+	display: inline-block;
+	
+	font-size: 16px;
+	line-height: 40px;
 }
-.logins .panel .loginer .loginList .username > div i {
-  width: 20px;
-  height: 20px;
-  padding-left: 8px;
-  color: white;
+form a{
+	color: antiquewhite;
 }
-.logins .panel .loginer .loginList .username input {
-  float: left;
-  height: 36px;
-  border: none;
-  outline: none;
-  padding-left: 12px;
+.row1 a:hover{
+	color: blue;
 }
-.logins .panel .loginer .loginList .pawd {
-  width: 278px;
-  height: 38px;
-  margin-bottom: 18px;
-  border: 1px solid #ddd;
+.add{
+	font-weight: bold;
+	color: orangered;
 }
-.logins .panel .loginer .loginList .pawd > div {
-  float: left;
-  width: 38px;
-  height: 36px;
-  line-height: 38px;
-  background: #ddd;
+.row2,.row3{
+	height: 267px;
+	border-bottom: 1px dotted #ccc;
+	overflow: hidden;
+	width: 300px;
 }
-.logins .panel .loginer .loginList .pawd > div i {
-  width: 20px;
-  height: 20px;
-  padding-left: 8px;
-  color: white;
+.row3{
+	display: none;
 }
-.logins .panel .loginer .loginList .pawd input {
-  float: left;
-  height: 36px;
-  border: none;
-  outline: none;
-  padding-left: 12px;
+#wrongu_1,#wrongu_2,#wrongu_3{
+	display: none;
 }
-.logins .panel .loginer .loginList label {
-  width: 278px;
-  height: 18px;
-  color: #C0C0C0;
-  font-size: 13px;
-  margin-top: -6px;
+#wrongu_4,#wrongu_5,#wrongu_6{
+	display: none;
 }
-.logins .panel .loginer .loginList label input {
-  margin-right: 5px;
+.row2_row1{
+	width: 270px;
+	height: 42px;
+	position: relative;
+	top: 0;
+	left: 0;
+	margin-bottom: 20px;
 }
-.logins .panel .loginer .loginList button {
-  width: 276px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  background: #FFC000;
-  font-size: 18px;
-  color: white;
-  border: none;
-  font-weight: 700;
-  margin-top: 15px;
-  border-radius: 2px;
+.row2_row2{
+	width: 270px;
+	height: 42px;
+	position: relative;
+	top: 0;
+	left: 0;
+	margin-bottom: 20px;
 }
-.logins .panel .loginer .register {
-  width: 328px;
-  height: 35px;
-  line-height: 35px;
-  background: #F5F5F5;
-  border-radius: 0 0 4px 4px;
-  position: absolute;
-  bottom: 0;
-  left: 1px;
+.row2_row3{
+	width: 270px;
+	height: 42px;
+	position: relative;
+	top: 0;
+	left: 0;
+	margin-bottom: 20px;
 }
-.logins .panel .loginer .register a {
-  font-size: 18px;
-  color: #7bbe2b;
-  padding-left: 210px;
+.row2_login{
+	margin-bottom: 16px;
 }
-.logins .panel .loginer .register i {
-  color: #7bbe2b;
+form input{
+	float: left;
+	height: 23px;
+	line-height: 30px;
+	color: #999;
+	border: 1px solid #dcdcdc;
+	font-size: 12px;
+	margin-top: 10px;
+}
+.denglu{
+    width: 270px;
+    background-color: #e10303;
+    color: #ccc;
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+    font-family: "Microsoft Yahei";
+    height: 40px;
+    font-weight: bold;
+    font-size: 17px;
+    color: white;
+}
+.wrong_user{
+	float: left;
+	width: 65px;
+	height: 27px;
+	margin-top: 10px;
+	font-size: 12px;
+	color: #FAFAD2;
+	margin-left: 5px;
+}
+.zhuangtailan{
+	position: absolute;
+	width: 350px;
+	bottom: 0;
+	left: 0;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	color: wheat;
+}
+.zhuangtailan a{
+	font-size: 18px;
+	float: right;
+	right: 22px;
+	color: white;
+	margin-right: 16px;
+	font-weight: bold;
 }
 
+/*尾部*/
 .context > p {
   text-align: center;
   font-size: 14px;

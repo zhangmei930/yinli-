@@ -6,29 +6,33 @@
 		<script src="../lib/requirejs/require.js" type="text/javascript" data-main="../js/cart" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="../css/head.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/footer.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/cart.css"/>
 	</head>
 	<body>
 		<div class="header"></div>
-		<div class="">
-			<h1>查看购物车</h1>
-			<div>
-				<span><label><input type="checkbox" id="chk_all">全选</label></span>
-				<span>商品编号</span>
-				<span>图片</span>
-				<span>描述</span>
-				<span>单价</span>
-				<span>数量</span>
-				<span>小计</span>
-				<span>操作</span>
-			</div>
-			<div class="cart_body">
-				
-			</div>
-			<div class="footer">
-				合计金额：<span class="total">0</span>
+		<div class="mains">
+			<h1>全部商品</h1>
+			<div class="carts">
+				<div class="carts_one">
+					<span><label><input type="checkbox" id="chk_all">全选</label></span>
+					<span class="id">全选</span>
+					<span>图片</span>
+					<span>商品信息</span>
+					<span>单价</span>
+					<span>数量</span>
+					<span>金额</span>
+					<span>操作</span>
+				</div>
+				<div class="cart_body">
+					
+				</div>
+				<div class="foot">
+					合计金额：<span class="total">0</span>
+				</div>
 			</div>
 		</div>
-		<script type="text/html">
+		<div class="footer"></div>
+		<script type="text/html" id="cart_template">
 			<% 
 				for (var i = 0, len = products.length; i < len; i++) {
 					var prod = products[i];
@@ -37,7 +41,7 @@
 				<span><input type="checkbox" class="chk_prod"></span>
 				<span class="id"><%= prod.id %></span>
 				<span><img src="<%= prod.imgSrc %>"></span>
-				<span><%= prod.name %></span>
+				<span><%= prod.title %></span>
 				<span class="price"><%= prod.price %></span>
 				<span><span class="minus">-</span><input type="text" size="1" value="<%= prod.amount %>" class="			amount"><span class="add">+</span></span>
 				<span class="sub"><%= prod.price * prod.amount %></span>
@@ -45,43 +49,6 @@
 			</div>
 			<% } %>
 		</script>
-		
 
-	<script src="lib/jquery/jquery-1.12.4.min.js"></script>
-	<script src="lib/jquery_plugins/jquery.cookie.js"></script>
-	<script>
-		function sss(){
-			// 页面打开，则读取 cookie 中已保存的购物车信息，展示到页面中
-			$.cookie.json = true;
-			var _products = $.cookie("products") || [];
-			if (_products.length === 0) {
-				alert("购物车为空，请选购商品....");
-				location = "product.html";
-			}
-			// 遍历所有已选购商品
-			$.each(_products,+ function(index, element){
-				$("div:first").clone(true)
-							  .children().eq(0).text(this.id)
-							  .next().html("<img src='"+ this.imgSrc +"'>")
-							  .parent().find("span").eq(2).text(this.name).end()
-							  .eq(3).text(this.price)
-							  .next().text(this.amount)
-							  .next().text(this.amount * this.price)
-							  .next().html("<a href='javascript:void(0);'>删除</a>")
-							  .parent()
-							  .appendTo(".cart_body");
-			});
-		};
-		// 查找指定id商品在 products 数组中是否已存在
-		// 存在则返回在数组中的下标，否则返回-1
-		function isExist(id, products) {
-			for (var i = 0, len = products.length; i < len; i++) {
-				if (products[i].id == id)
-					return i;
-			}
-
-			return -1;
-		}
-	</script>
 	</body>
 </html>

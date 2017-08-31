@@ -1,0 +1,43 @@
+.mains h1 {
+  width: 1000px;
+  height: 30px;
+  margin: auto;
+  border-bottom: 2px solid #efefef;
+  margin-top: 15px;
+  line-height: 30px;
+  font-size: 18px;
+  color: #666;
+  font-weight: normal;
+}
+.mains .carts {
+  width: 1000px;
+  height: 997px;
+  margin: auto;
+}
+.mains .carts .carts_one {
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+}
+.mains .carts .carts_one label {
+  width: 114px;
+  height: 38px;
+  padding-left: 10px;
+}
+.mains .carts .carts_one span {
+  width: 114px;
+  height: 38px;
+}
+.mains .carts .cart_body {
+  width: 1000px;
+  height: 612px;
+  margin: auto;
+  border: 1px solid #ccc;
+}
+.mains .carts .cart_body .row {
+  width: 1000px;
+  height: 102px;
+  border-bottom: 1px solid #ccc;
+}
+
+/*# sourceMappingURL=cart.css.map */

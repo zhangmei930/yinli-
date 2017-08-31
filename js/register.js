@@ -1,107 +1,153 @@
-require(["config"], function(){
-	require(["jquery", "load"], function(){
-		$(".regis").click(function(){
-			var isExist = true; // 标记输入的用户名是否存在
-			// 用户名以字母开头，可包含数字字母下划线字符，长度在4到20位之间
-			function ckUsername() {
-				var result = /^1[3,4,5,7,8]\d{9}$/.test($("#username").value);
-				$("#username_info").innerHTML = "";
-				if (!result)
-					$("#username_info").innerHTML = "用户名格式有误";
-				return result;
-			}
-			$("#username").blur(function(){
-				// 用户名文本框失去焦点，首先格式			验证格式是否正确，再验证用户名是否已被占用
-				// 格式
-				if(!ckUsername())
-					return;
-				// 是否被占用，使用 ajax
-				// a. 创建核心对象
-				var xhr = new XMLHttpRequest();
-				// b. 建立连接(打开连接)
-				xhr.open("get", "check.php?username=" + this.value, true);
-				// c. 发送请求
-				xhr.send();
-				// d. 处理响应
-				xhr.onreadystatechange = function(){
-					if (xhr.readyState === 4) { // 请求处理完毕，响应就绪
-						if (xhr.status === 200) { // OK，正常请求到资源
-							// 获取响应数据
-							var data = xhr.responseText;
-							// 数据处理逻辑
-							// console.log(data);
-							data = JSON.parse(data);
-							if (data.status === 0) {
-								$("#username_info").innerHTML = "用户名已存在，请重新选择新用户名";
-								isExist = true; // 标记用户存在
-							} else {
-								$("#username_info").innerHTML = "用户名可用";
-								isExist = false; // 标记用户不存在
-							}
-						}
-					}
+require(["config"],function(){
+	require(["jquery"],function($){
+		window.onload = function(){
+			$("input").val("")
+			var num1 = 0,num2 = 0,num3 = 0,num4 = 0,num5 = 0,num6 = 0,num7 = 0,num8 = 0
+		}
+		$(document).ready(function(){
+			$(".head_inner_select_small").parent().children().hover(function(){
+			  	$(".head_inner_select_mid").show();
+			},function(){
+			  	$(".head_inner_select_mid").hide();
+			}) 
+			var count = 1
+			$(".username").click(function(){
+				$(".username").addClass("add")
+				$(".mobile").removeClass("add")
+				$(".row2").show()
+				$(".row3").hide()
+				count = 1
+			})
+			$(".mobile").click(function(){
+				$(".mobile").addClass("add")
+				$(".username").removeClass("add")
+				$(".row3").show()
+				$(".row2").hide()
+				count = 0
+			})
+			var num1 = 0,num2 = 0,num3 = 0,num4 = 0,num5 = 0,num6 = 0,num7 = 0,num8 = 0
+			
+			$(".denglu").click(function(){
+				console.log($(".sthelse input").attr("checked") === "cheked")
+				var _last1 = num1*num2*num3
+				var _last2 = num4*num5*num6*num7*num8
+				console.log(_last1)
+				console.log(_last2)
+				if(_last1 || _last2){
+					window.location.replace("/index.html");
 				}
-		    )};
-			// 密码可以是任意字符，长度在6-20位之间
-			function ckPassword() {
-				var result = /^.{6,20}$/.test($("#password").value);
-				$("#password_info").innerHTML = "";
-				if (!result)
-					$("#password_info").innerHTML = "密码格式有误";
-	
-				return result;
+				else{
+					$(".zhuangtailan").text("请填写正确的注册信息并勾选千杯网注册协议!")
+				}	
+			})
+			//表单判定
+			//1.是否输入及正则判定
+			_blur($(".row2_row1_user_2"),$("#wrongu_1"),$("#wrongu_a_1"),$("#wrongu_b_1"))
+			_blur($(".row2_row2_user_2"),$("#wrongu_2"),$("#wrongu_a_2"),$("#wrongu_b_2"))
+			_blur($(".row2_row3_user_2"),$("#wrongu_3"),$("#wrongu_a_3"),$("#wrongu_b_3"))
+			_blur($(".row2_row4_user_2"),$("#wrongu_4"),$("#wrongu_a_4"),$("#wrongu_b_4"))
+			_blur($(".row2_row5_user_2"),$("#wrongu_5"),$("#wrongu_a_5"),$("#wrongu_b_5"))
+			_blur($(".row3_row1_user_2"),$("#wrongu_6"),$("#wrongu_a_6"),$("#wrongu_b_6"))
+			_blur($(".row3_row2_user_2"),$("#wrongu_7"),$("#wrongu_a_7"),$("#wrongu_b_7"))
+			_blur($(".row3_row3_user_2"),$("#wrongu_8"),$("#wrongu_a_8"),$("#wrongu_b_8"))
+			_blur($(".row3_row4_user_2"),$("#wrongu_9"),$("#wrongu_a_9"),$("#wrongu_b_9"))
+			_blur($(".row3_row5_user_2"),$("#wrongu_10"),$("#wrongu_a_10"),$("#wrongu_b_10"))
+			//2.是否提醒判定
+			_focus($(".row2_row1_user_2"),$("#wrongu_1"),$("#wrongu_a_1"),$("#wrongu_b_1"))
+			_focus($(".row2_row2_user_2"),$("#wrongu_2"),$("#wrongu_a_2"),$("#wrongu_b_2"))
+			_focus($(".row2_row3_user_2"),$("#wrongu_3"),$("#wrongu_a_3"),$("#wrongu_b_3"))
+			_focus($(".row2_row4_user_2"),$("#wrongu_4"),$("#wrongu_a_4"),$("#wrongu_b_4"))
+			_focus($(".row2_row5_user_2"),$("#wrongu_5"),$("#wrongu_a_5"),$("#wrongu_b_5"))
+			_focus($(".row3_row1_user_2"),$("#wrongu_6"),$("#wrongu_a_6"),$("#wrongu_b_6"))
+			_focus($(".row3_row2_user_2"),$("#wrongu_7"),$("#wrongu_a_7"),$("#wrongu_b_7"))
+			_focus($(".row3_row3_user_2"),$("#wrongu_8"),$("#wrongu_a_8"),$("#wrongu_b_8"))
+			_focus($(".row3_row4_user_2"),$("#wrongu_9"),$("#wrongu_a_9"),$("#wrongu_b_9"))
+			_focus($(".row3_row5_user_2"),$("#wrongu_10"),$("#wrongu_a_10"),$("#wrongu_b_10"))
+			//3.正则判定
+			//正则系列
+			var _phone = /^1[34578]\d{9}$/
+			var _pass = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,16}$/
+			var _email = /\w+@([0-9a-zA-Z]+[-0-9a-zA-Z]*)(\.[0-9a-zA-Z]+[-0-9a-zA-Z]*)+/
+			var _user = /^[a-zA-Z]\w{7,15}$/
+			//聚焦提醒
+			function _focus(val,wrong,wrong2,wrong3){
+			val.focus(function(){
+					wrong.hide()
+					wrong2.show()
+					if(wrong3)
+					wrong3.hide()
+			})	
 			}
-			$("#password").onblur = ckPassword;
-			// 再次输入密码
-			function ckRepassword() {
-				var result = /^.{6,20}$/.test($("#Repassword").value);
-				if (ckPassword() === ckRepassword())
-				    $("Repassword_info").innerHTML = "";
+			var makesure = 0
+			//输入框是否输入
+			function _blur(val,wrong,wrong2,wrong3){
+			if(val.val())
+				wrong.hide()	
+			else
+				wrong.show()
+			val.blur(function(){
+				wrong2.hide()
+				if(val.val()){
+					wrong.hide()
+					if(val[0] === $(".row2_row1_user_2")[0]){
+						var result = _phone.test(val.val())
+						if(!result)
+						wrong3.show()
+						else
+						num1 = 1
+					}
+					if(val[0] === $(".row2_row4_user_2")[0]){
+						var result = _pass.test(val.val())
+						if(!result)
+						wrong3.show()
+						else
+						num2 = 1
+					}
+					if(val[0] === $(".row2_row5_user_2")[0]){
+						if(val.val() !== $(".row2_row4_user_2").val())
+						wrong3.show()
+						else
+						num3 = 1
+					}
+					if(val[0] === $(".row3_row1_user_2")[0]){
+						var result = _user.test(val.val())
+						if(!result)
+						wrong3.show()
+						else
+						num4 = 1
+					}
+					if(val[0] === $(".row3_row2_user_2")[0]){
+						var result = _email.test(val.val())
+						if(!result)
+						wrong3.show()
+						else
+						num5 = 1
+					}
+					if(val[0] === $(".row3_row3_user_2")[0]){
+						var result = _phone.test(val.val())
+						if(!result)
+						wrong3.show()
+						else
+						num6 = 1
+					}
+					if(val[0] === $(".row3_row4_user_2")[0]){
+						var result = _pass.test(val.val())
+						if(!result)
+						wrong3.show()
+						else
+						num7 = 1
+					}
+					if(val[0] === $(".row3_row5_user_2")){
+						if(val.val() !== $(".row3_row4_user_2").val())
+						wrong3.show()
+						else
+						num8 = 1
+					}		
+				}	
 				else
-					$("Repassword_info").innerHTML = "密码不一致，请重新输入";
-				return;
-			}
-			$("#Repassword").onblur = ckRepassword;
-	        //手机验证码
-	        
-			// 表单提交事件
-			$("form")[0].onsubmit = function(e){
-				e = e || event;
-				// 阻止表单的提交
-				e.preventDefault ? e.preventDefault() : e.returnValue = false;
-	
-				if (!(ckUsername() && ckPassword() && ckCid()) || isExist){
-					return;
-				}
-	
-				// 向服务器提交注册用户信息：ajax
-				// 1. 创建核心对象
-				var xhr = new XMLHttpRequest();
-				// 2. 建立连接
-				xhr.open("post", "register.php", true);
-				// 3. 发送请求
-				var queryString = "username=" + $("#username").value + "&password=" + $("#password").value + "&cid=" + $("#cid").value;
-				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-				xhr.send(queryString);
-				// 4. 处理响应
-				xhr.onreadystatechange = function(){
-					if (xhr.readyState === 4) {
-						if (xhr.status === 200) {
-							var data = xhr.responseText;
-							data = JSON.parse(data);
-							/*if (data.status === 1) {
-								// 将注册成功的用户信息保存到 cookie 中
-								setCookie("user", JSON.stringify(data.user));
-								location = "success.html";
-							}*/
-							if (data.status === 1) {
-								var queryString = `username=${data.user.username}&nickname=${data.user.nickname}&score=${data.user.score}&level=${data.user.level}`;
-								location = "success.html?" + queryString;
-							}
-						}
-					}
-				}
+					wrong.show()
+			})	
 			}
 		})
-   });
-});
+	})
+})

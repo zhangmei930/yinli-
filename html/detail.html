@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="../css/footer.css"/>
 		<link rel="stylesheet" href="../css/head.css"/>
 		<link rel="stylesheet" href="../css/detail.css"/>
+		<link rel="stylesheet" href="../css/magnifier.css"/>
 		<script src="../lib/requirejs/require.js" data-main="../js/detail"></script>
 	</head>
 	<body>
@@ -23,7 +24,7 @@
 			<!--产品详情-->
 			<div class="clearfix">
 				<!--引入放大镜-->
-				<div class="mirror"></div>	
+				<div class="mirrorLeft"></div>	
 				<!--详情规格-->
 				<div class="fixRight">
 					<div class="fixind">
@@ -33,44 +34,73 @@
 					<div class="fixSummary">
 						<div class="fixPrice">
 							<div>
-								<p>折扣价 ：<span>¥ 2.10</span></p>
-								<p>原价 ：<span class="now_price">¥ 4.50</span> <span class="fix_compare">该价格统计为个大超市及菜市场 均价</span></p>
+								<p>折扣价 ：<span class="more">¥ 2.10</span></p>
+								<p class="priceTop">原价 ：<span>¥ 4.50</span> <span class="fix_compare">该价格统计为个大超市及菜市场 均价</span></p>
 							</div>
 						</div>
 						<div class="fix-review">
 							<p>累计评价</p>
-							<p><b>30</b>+</p>
+							<p class="have"><b>30</b>+</p>
 						</div>
 					</div>
 					<div class="fix_store">
-						<p>成都有货</p>
+						<p class="bootom">成都有货</p>
 						<p>服&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;务 ： 由银犁食品发货，并提供售后服务</p>
 					</div>
 					<div class="fixChoose">
 						<div class="kind">
-							<span>选择种类</span>
-							<span>400.0克</span>
+							<span>选择种类 : </span>
+							<span class="weight">400.0克</span>
 						</div>
-						<div class="sp-choose-count">
-	                    <div class="sp-choose-counts sp-position">
-	                                                                                    数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量：
-	                        <div class="sp-count sp-inline-block sp-border">
-	                            <div>
-	                                <input type="text" value="1" id="count-num" class="other">
-	                                <a href="javascript:void(0)" class="reduce-btn">-</a>
-	                                <a href="javascript:void(0)" class="add-btn" style="border: 1px solid rgb(255, 192, 0); background: rgb(251, 228, 184);">+</a>
-	                            </div>
+	                    <div class="counts">
+	                        <span> 数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量：</span>
+	                        <div>
+	                            <input type="text" value="1" id="count-num" class="other">
+	                            <a href="javascript:void(0)" class="reduce-btn">-</a>
+	                            <a href="javascript:void(0)" class="add-btn" style="border: 1px solid rgb(255, 192, 0); background: rgb(251, 228, 184);">+</a>
 	                        </div>
 	                        <a href="javascript:void(0)" id="buyBtn" class="buy">立即购买</a>
-	                        <i class="iconfont icon-gouwuche1"></i>加入购物车</a>
-	                        <p class="orange">温馨提示 : 1.不支持退货;2.在线订单需要在半小时内支付否则订单将失效</p>
+	                        <a href="javascript:void(0)" id="buyBtn" class="joins"><i class="iconfont icon-gouwuche1"></i>加入购物车</a>
 	                    </div>
+	                    <p class="orange">温馨提示 : 1.不支持退货;2.在线订单需要在半小时内支付否则订单将失效</p>
                     </div>
 				</div>
-						
-					
-
+			</div>
+			<div class="appraise">
+				<div class="appraise_title">
+					<ul>
+						<li class="title_one">商品介绍</li>
+						<li>售后保障</li>
+						<li>评价（30+）</li>
+						<li class="title_last">加入购物车</li>
+					</ul>
+				</div>
+				<div class="appraise_context">
+					<ul>
+						<li>最佳烹饪方式：炒</li>
+						<li>包装方式：普通包装</li>
+						<li>规格 ：400.0克/分</li>
+					</ul>
+					<ul>
+						<li>最佳食用方式：熟食</li>
+						<li>资质认证 ： 无公害</li>
+					</ul>
+					<ul>
+						<li>部位 ： 整体</li>
+						<li>产地 ： 四川</li>
+					</ul>
+					<ul>
+						<li>等级 ： 特级</li>
+						<li>品种 ： 圆叶空心菜</li>
+					</ul>
+				</div>
+				
+			</div>
+			<div class="trait">
+				<img src="../images/ind1.jpg"/>
+				<img src="../images/ind6.jpg"/>
 			</div>
 		</div>
+		<div class="footer"></div>
 	</body>
 </html>

@@ -117,93 +117,177 @@ a {
   background: url(../images/login-login.png) no-repeat center left;
   position: relative;
 }
-.registers .panel .registerer {
-  width: 330px;
-  height: 428px;
-  background: white;
-  margin-top: 30px;
-  float: right;
-  border-radius: 4px;
+.registers .panel .form_div{
+    background-color: rgba(0,0,0,0.5);
+    overflow: hidden;
+    position: relative;
+    width: 35%;
+    top: 30px;
+    left: 67%;
 }
-.registers .panel .registerer .registerList {
-  width: 278px;
-  height: 380px;
-  margin: 24px 26px;
+.youshang{
+	display: block;
+	width: 65px;
+	height: 65px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 9999;
+	cursor: pointer;
 }
-.registers .panel .registerer .registerList h1 {
-  width: 278px;
-  height: 18px;
-  font-size: 18px;
-  color: #666;
-  font-weight: 800;
-  padding-bottom: 26px;
+.youshang i{
+	background-position: 0 -230px;
+	width: 65px;
+	height: 65px;
+	display: block;
 }
-.registers .panel .registerer .registerList form > input {
-  width: 278px;
-  height: 38px;
-  margin-bottom: 18px;
-  padding: 0 8px;
+.zhuti{
+	width: 80%;
+	margin-left: 20px;
 }
-.registers .panel .registerer .registerList .test {
-  width: 278px;
-  height: 38px;
-  margin-bottom: 18px;
+.row1{
+	margin: 10px 0 15px;
+	height: 40px;
+	overflow: hidden;
+	line-height: 40px;
+	border-bottom: 1px solid #e9e9e9;
 }
-.registers .panel .registerer .registerList .test .telTest {
-  width: 156px;
-  height: 38px;
-  padding: 0 8px;
+.row1 span{
+	float: left;
+	display: inline-block;
+	font-size: 12px;
+	color: #999;
+	padding: 0 18px;
 }
-.registers .panel .registerer .registerList .test .sendTest {
-  width: 100px;
-  height: 38px;
-  background: #7BBE2B;
-  color: white;
-  font-size: 14px;
-  border: none;
-  margin-left: 18px;
-  border-radius: 4px;
+.row1 a{
+	float: left;
+	display: inline-block;
+	
+	font-size: 16px;
+	line-height: 40px;
 }
-.registers .panel .registerer .registerList label {
-  height: 20px;
-  margin-bottom: 6px;
-  color: #666;
-  font-size: 12px;
+form a{
+	color: antiquewhite;
 }
-.registers .panel .registerer .registerList label a {
-  color: #7BBE2B;
+.row1 a:hover{
+	color: blue;
 }
-.registers .panel .registerer .registerList .regis {
-  width: 276px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  background: #FFC000;
-  font-size: 18px;
-  color: white;
-  border: none;
-  font-weight: 700;
-  margin-top: 15px;
-  border-radius: 2px;
+.add{
+	font-weight: bold;
+	color: orangered;
 }
-.registers .panel .registerer .logines {
-  width: 328px;
-  height: 35px;
-  line-height: 35px;
-  background: #F5F5F5;
-  border-radius: 0 0 4px 4px;
-  position: absolute;
-  bottom: 11px;
-  left: 669px;
+.row2,.row3{
+	border-bottom: 1px dotted #ccc;
+	width: 100%;
 }
-.registers .panel .registerer .logines a {
-  font-size: 16px;
-  color: #FFC000;
+.row2 input,.row3 input{
+	width: 45%;
 }
-.registers .panel .registerer .logines .one {
-  padding-left: 26px;
+.row3{
+	display: none;
 }
 
+.row2_row1,.row2_row2,.row2_row3,.row2_login{
+	width: 100%;
+	height: 30px;
+	position: relative;
+	top: 0;
+	left: 0;
+	margin-bottom: 20px;
+}
+.row2_login{
+	margin-bottom: 16px;
+}
+form input{
+	float: left;
+	height: 23px;
+	line-height: 30px;
+	color: #999;
+	border: 1px solid #dcdcdc;
+	font-size: 12px;
+	margin-top: 10px;
+}
+.denglu{
+    width: 270px;
+    background-color: #e10303;
+    color: #ccc;
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+    font-family: "Microsoft Yahei";
+    height: 40px;
+    font-weight: bold;
+    font-size: 17px;
+    color: white;
+    margin-left: 5%;
+}
+.wrong_user{
+	float: left;
+	width: 45%;
+	height: 27px;
+	margin-top: 10px;
+	font-size: 12px;
+	color: #FAFAD2;
+	margin-left: 5%;
+	display: none;
+}
+
+.zhuangtailan{
+	position: absolute;
+	width: 350px;
+	bottom: 0;
+	left: 0;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	color: wheat;
+}
+.sthelse{
+	font-size: 12px;
+}
+.sthelse input{
+    height: 40px;
+    line-height: 40px;
+    color: #999;
+    border: 1px solid #dcdcdc;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+::-webkit-input-placeholder
+{
+	color: deeppink;
+}
+:-moz-placeholder{
+	color: deeppink;
+}
+::-moz-placeholder{
+	color: deeppink;
+}
+:-ms-input-placeholder{
+	color: deeppink;
+}
+.sthelse span{
+	display: inline-block;
+	margin-left: 10px;
+	color: navajowhite;
+	height: 40px;
+    line-height: 40px;
+    margin-top: 10px;
+}
+.zhuangtailan{
+	position: absolute;
+	width: 350px;
+	bottom: 0;
+	left: 0;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	color: wheat;
+	left: 6%;
+}
+
+/*尾部*/
 .context > p {
   text-align: center;
   font-size: 14px;
@@ -218,5 +302,3 @@ a {
 .context > p a:hover {
   color: #7dbf2d;
 }
-
-/*# sourceMappingURL=register.css.map */
