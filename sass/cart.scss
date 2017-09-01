@@ -53,7 +53,8 @@
                 margin: auto;
                 padding: 10px;
                 border: 1px soli #ddd;
-                span{
+                position: relative;
+                >span{
                     display: block;
                     float: left;
                     &:nth-child(1){
@@ -89,9 +90,40 @@
                         font-size: 14px;
                     }
                     &:nth-child(6){
-                        width: 90px;
+                        width: 100px;
                         height: 22px;
                         font-size: 14px;
+                        display: block;
+                        border: 1px solid #FFC000;
+                        .minus, .add{
+                            width: 18px;
+                            height: 22px;
+                            display: block;
+                            text-align: center;
+                        }
+                        .minus{
+                            border-right: 1px solid #FFC000;
+                            float: left;
+                            text-align: center;
+                        }
+                        .add{
+                            background: #FFC000;
+                            border: none;
+                            float: right;
+                        }
+                        input{
+                            width: 48px;
+                            height: 20px;
+                            outline: none;
+                            border: none;
+                            float: left;
+                        }
+                    }
+                    &:nth-child(7){
+                        width: 150px;
+                        height: 18.5px;
+                        font-weight: bold; 
+                        margin-left: 20px;
                     }
                 }
             }

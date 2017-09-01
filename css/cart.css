@@ -54,31 +54,32 @@
   margin: auto;
   padding: 10px;
   border: 1px soli #ddd;
+  position: relative;
 }
-.mains .carts .cart_body .row span {
+.mains .carts .cart_body .row > span {
   display: block;
   float: left;
 }
-.mains .carts .cart_body .row span:nth-child(1) {
+.mains .carts .cart_body .row > span:nth-child(1) {
   width: 30px;
   height: 18px;
 }
-.mains .carts .cart_body .row span:nth-child(2) {
+.mains .carts .cart_body .row > span:nth-child(2) {
   width: 0;
   display: none;
 }
-.mains .carts .cart_body .row span:nth-child(3) {
+.mains .carts .cart_body .row > span:nth-child(3) {
   width: 80px;
   height: 80px;
   background: white;
   cursor: pointer;
   border: 1px solid #f2f2f2;
 }
-.mains .carts .cart_body .row span:nth-child(3) img {
+.mains .carts .cart_body .row > span:nth-child(3) img {
   width: 80px;
   height: 80px;
 }
-.mains .carts .cart_body .row span:nth-child(4) {
+.mains .carts .cart_body .row > span:nth-child(4) {
   width: 376px;
   height: 38px;
   cursor: pointer;
@@ -86,15 +87,46 @@
   color: #666;
   margin-left: 10px;
 }
-.mains .carts .cart_body .row span:nth-child(5) {
+.mains .carts .cart_body .row > span:nth-child(5) {
   width: 118px;
   height: 18px;
   font-size: 14px;
 }
-.mains .carts .cart_body .row span:nth-child(6) {
-  width: 90px;
+.mains .carts .cart_body .row > span:nth-child(6) {
+  width: 100px;
   height: 22px;
   font-size: 14px;
+  display: block;
+  border: 1px solid #FFC000;
+}
+.mains .carts .cart_body .row > span:nth-child(6) .minus, .mains .carts .cart_body .row > span:nth-child(6) .add {
+  width: 18px;
+  height: 22px;
+  display: block;
+  text-align: center;
+}
+.mains .carts .cart_body .row > span:nth-child(6) .minus {
+  border-right: 1px solid #FFC000;
+  float: left;
+  text-align: center;
+}
+.mains .carts .cart_body .row > span:nth-child(6) .add {
+  background: #FFC000;
+  border: none;
+  float: right;
+}
+.mains .carts .cart_body .row > span:nth-child(6) input {
+  width: 48px;
+  height: 20px;
+  outline: none;
+  border: none;
+  float: left;
+}
+.mains .carts .cart_body .row > span:nth-child(7) {
+  width: 150px;
+  height: 18.5px;
+  font-weight: bold;
+  margin-left: 20px;
 }
 
 /*# sourceMappingURL=cart.css.map */

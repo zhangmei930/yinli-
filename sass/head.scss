@@ -46,7 +46,8 @@ a {text-decoration: none;}
                 &:hover {
                     background: #FFFFFF;
                     .contact {
-                        display: block;  
+                        display: block; 
+                        background: rgba(255, 255, 255, 1); 
                     }
                 }
             }
@@ -68,6 +69,7 @@ a {text-decoration: none;}
                     background: #FFFFFF;
                     >p{
                         display: block;
+                        background: rgba(255, 255, 255, 1);
                     }
                 }
             }
