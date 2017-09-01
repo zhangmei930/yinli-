@@ -81,7 +81,6 @@
 .mains .carts .cart_body .row span:nth-child(4) {
   width: 376px;
   height: 38px;
-  display: none;
   cursor: pointer;
   font-size: 14px;
   color: #666;
